@@ -1,0 +1,294 @@
+/* Shopping DNA Styles */
+
+.shopping-dna {
+    background: var(--color-surface);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    border: 1px solid var(--color-border-light);
+}
+
+.section-icon {
+    font-size: var(--font-size-xl);
+}
+
+.dna-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+/* Chart Section */
+.dna-chart-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6);
+    align-items: center;
+}
+
+.dna-chart {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+}
+
+.chart-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.chart-total {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-text);
+    transition: all 0.3s ease;
+}
+
+.chart-label {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+.chart-category-name {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.chart-percentage {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    font-weight: 500;
+}
+
+/* Legend */
+.category-legend {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.legend-item:hover,
+.legend-item.active {
+    background: var(--color-bg-secondary);
+}
+
+.legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: var(--radius-full);
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+.legend-item:hover .legend-dot,
+.legend-item.active .legend-dot {
+    transform: scale(1.3);
+}
+
+.legend-name {
+    flex: 1;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+}
+
+.legend-label {
+    flex: 1;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+}
+
+.legend-value {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+/* Subtitle */
+.dna-subtitle {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: var(--space-3);
+}
+
+.dna-subtitle svg {
+    color: var(--color-primary);
+}
+
+/* Brands */
+.brands-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.brand-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3);
+    background: var(--color-bg-secondary);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-fast);
+}
+
+.brand-item:hover {
+    background: var(--color-bg);
+    transform: translateX(4px);
+}
+
+.brand-rank {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-primary);
+    color: var(--color-text-inverse);
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    border-radius: var(--radius-md);
+}
+
+.brand-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.brand-name {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.brand-purchases {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+.brand-spent {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+/* Patterns */
+.patterns-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+    margin-bottom: var(--space-3);
+}
+
+.pattern-card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3);
+    background: var(--color-bg-secondary);
+    border-radius: var(--radius-lg);
+}
+
+.pattern-icon {
+    color: var(--color-primary);
+    flex-shrink: 0;
+}
+
+.pattern-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.pattern-label {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+.pattern-value {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.pattern-days {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+}
+
+.days-badges {
+    display: flex;
+    gap: var(--space-2);
+}
+
+.day-badge {
+    padding: var(--space-1) var(--space-3);
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--color-primary);
+    font-size: var(--font-size-xs);
+    font-weight: 500;
+    border-radius: var(--radius-full);
+}
+
+/* Expanded State */
+.shopping-dna.expanded .dna-chart-section {
+    grid-template-columns: 1fr;
+}
+
+.shopping-dna.expanded .dna-chart {
+    width: 220px;
+    height: 220px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .dna-chart-section {
+        grid-template-columns: 1fr;
+    }
+
+    .patterns-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== SAVINGS THEME STYLES ===== */
+
+.shopping-dna.savings-theme .section-icon.savings {
+    color: #22c55e;
+}
+
+.shopping-dna.savings-theme .chart-center.savings-center .chart-total.text-success {
+    color: #22c55e;
+}
+
+.shopping-dna.savings-theme .chart-label {
+    color: #16a34a;
+    font-weight: 500;
+}
